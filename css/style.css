@@ -214,6 +214,35 @@
   background-size: cover;
 }
 
+.carousel-area{
+  height:525px;
+}
+
+.carousel-cell{
+  width: 100%;
+  display:flex;
+  justify-content:center;
+}
+
+.carousel-cell img{
+  background-size:100%;
+}
+
+.carousel-cell h3{
+  color:#e2574c;
+  font-size: 24px;
+  text-align:center;
+}
+
+.carousel-cell p{
+  color: rgb(147, 147, 147);
+  text-align:center;
+}
+
+.carousel-cell button{
+  text-align:center;
+}
+
 .ralewaybanner {
   font-family: "Raleway Medium";
   font-size: 16px;
@@ -243,6 +272,7 @@ header {
   position: fixed;
   background: white;
   width: 100%;
+  z-index: 1;
 }
 
 .greytext {
@@ -269,6 +299,10 @@ header {
   flex-direction: column;
   font-family:"playfair regular";
   font-size: 12px;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .bottompage a{
@@ -332,14 +366,20 @@ header {
     font-size: 16px;
   }
 
+  .bodytext{
+    margin: 20px 25% 35px 25%;
+  }
+
   .deadheader{
     height:74.25px;
   }
+
   .nav-items {
     position:relative;
     top:-40px;
     padding: 0px 25%;
   }
+
   .headerline{
     display:none;
   }
@@ -366,8 +406,47 @@ header {
     flex-basis:49.5%;
   }
 
+  .carousel-cell{
+    width: 50%;
+  }
+
+  .subheading{
+    font-size: 40px;
+  }
+
+  .subheadingbold{
+    font-size:40px;
+  }
+
+  .formfield{
+    height:40px;
+    font-size:24px;
+  }
+
+  .formbutton{
+    height:36px;
+    width:120px;
+    font-size:20px;
+    margin-top:-39px;
+  }
+
+  .subscribeform{
+    height:500px;
+    justify-content:center;
+  }
+
+  .subscribeform h2{
+    margin-bottom:30px;
+  }
+
+  .subscribeform p{
+    margin:0px 20% 20px 20%;
+    font-size: 20px;
+  }
+  
+
   .bottompage {
-    height:175px;
+    height:250px;
     width: 75%;
     color: white;
     display: flex;
@@ -383,16 +462,20 @@ header {
     height: auto;
     color: white;
     display: flex;
+    flex-direction:column;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     width: 25%;
-    margin: 0% 25% 40px 25%;
+    margin: 60px 5% 40px 0px;
     font-size: 14px;
   }
 
   .socialmedia span {
     display: inline;
+    font-family: "raleway medium";
+    margin-left: 10px;
   }
+
   .footerflex {
     flex-direction: row;
   }
@@ -401,7 +484,51 @@ header {
 /* Breakpoint for desktop*/
 
 @media (min-width: 1240px) {
-  body {
-    background: plum;
+  .carousel-cell{
+    width: 25%;
+  }
+
+  .bodytext{
+    margin: 20px 35% 35px 35%;
+  }
+
+  .subscribeform{
+    height:500px;
+    justify-content:center;
+  }
+
+  .formfield{
+    position:relative;
+    width:30%;
+    font-size:24px;
+    height:40px;
+    border-radius:25px;
+    border:none;
+    margin:0px 35% 0px 35%;
+    padding-left:15px;
+    font-family:"raleway medium";
+  }
+  
+  .formbutton{
+    height:36px;
+    width:120px;
+    font-size:20px;
+    margin-top:-39px;
+  }
+
+  .buttonflex{
+    margin: 0px 34.5% 0px 34.5%;
+  }
+
+  .subscribeform p{
+    margin: 0px 35% 20px 35%;
+  }
+
+  .bottompage{
+    width:90%;
+  }
+
+  .socialmedia{
+    width:10%;
   }
 }
