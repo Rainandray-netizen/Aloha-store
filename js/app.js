@@ -1,9 +1,18 @@
 const el = document.getElementsByTagName("input") 
+console.log(el)
 //select inputs
-el[1].addEventListener("click", function(){ //select element 0
+el[1].addEventListener("click", function(event){ //select element 0 and listen for it
+  event.preventDefault()
+  var val= document.getElementById("textfield").value
+  var locatedStr = val.search(".com")
+  var locatedAt = val.search("@")
+  if (locatedStr > -1 && locatedAt > -1){
     alert("Thank you for subscribing!")
+  } else {
+    alert("Please enter a valid email")
+  }
+  document.getElementById("textfield").value = ""
 })
-console.log(el) //displays buttons in console
 
 var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
